@@ -24,4 +24,13 @@ class NestedList extends Component
           return r.li item
     ]
 
+NestedList.propTypes = {
+  list: React.PropTypes.arrayOf(React.PropTypes.oneOfType([
+      React.PropTypes.string
+      React.PropTypes.number
+      React.PropTypes.instanceOf(Array)
+    ]))
+  level: React.PropTypes.number
+}
+
 module.exports = NestedList
