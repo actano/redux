@@ -3,12 +3,7 @@ React = require 'react'
 r = require 'r-dom'
 TodoItem = require './TodoItem'
 Footer = require './Footer'
-{ SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } = require '../constants/TodoFilters'
-
-TODO_FILTERS = {}
-TODO_FILTERS[SHOW_ALL] = -> true
-TODO_FILTERS[SHOW_ACTIVE] = (todo) -> !todo.completed
-TODO_FILTERS[SHOW_COMPLETED] = (todo) -> todo.completed
+{ SHOW_ALL } = require '../constants/TodoFilters'
 
 class MainSection extends Component
   constructor: (props, context) ->
@@ -24,7 +19,7 @@ class MainSection extends Component
       @props.actions.clearCompleted()
 
   handleShow: (filter) =>
-    @setState {filter}
+    console.log 'not implemented yet'
 
   renderToggleAll: (completedCount) =>
     { todos, actions } = @props
@@ -50,9 +45,7 @@ class MainSection extends Component
 
   render: =>
     { todos, actions } = @props
-    { filter } = @state
 
-    filteredTodos = todos.filter TODO_FILTERS[filter]
     completedCount = todos.reduce (count, todo) ->
       if todo.completed then count + 1 else count
     , 0
@@ -61,7 +54,7 @@ class MainSection extends Component
       className: "main", [
         @renderToggleAll completedCount
         r.ul
-          className: "todo-list", filteredTodos.map (todo) ->
+          className: "todo-list", todos.map (todo) ->
             props = Object.assign {},
               key: todo.id
               todo: todo
