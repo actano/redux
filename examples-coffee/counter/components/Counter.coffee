@@ -4,10 +4,9 @@ r = require 'r-dom'
 
 class Counter extends Component
   render: ->
-    { increment, incrementIfOdd, incrementAsync, decrement, counter } = @props
+    { title, increment, decrement } = @props
     return r.p {}, [
-        r.span "Clicked #{counter} times"
-        ' '
+        r.h1 title
         r.button
           onClick: increment
         , '+'
@@ -15,22 +14,12 @@ class Counter extends Component
         r.button
           onClick: decrement
         , '-'
-        ' '
-        r.button
-          onClick: incrementIfOdd
-        , 'Increment if odd'
-        ' '
-        r.button
-          onClick: -> incrementAsync()
-        , 'Increment async'
       ]
 
 Counter.propTypes = {
-  increment: PropTypes.func.isRequired,
-  incrementIfOdd: PropTypes.func.isRequired,
-  incrementAsync: PropTypes.func.isRequired,
-  decrement: PropTypes.func.isRequired,
-  counter: PropTypes.number.isRequired
+  title: PropTypes.string.isRequired
+  increment: PropTypes.func.isRequired
+  decrement: PropTypes.func.isRequired
 }
 
 module.exports = Counter
