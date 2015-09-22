@@ -15,9 +15,7 @@ cd examples-coffee
 ```
 
 ### Starting the app
-```
-npm start
-```
+In each example (directory) you can start the app with `npm start`
 then open [http://localhost:3000](http://localhost:3000)
 
 ##### Boilerplate Code
