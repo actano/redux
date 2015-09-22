@@ -9,6 +9,7 @@ All examples in the subdirectory contains a README.md with some exercises.
 Use this shell script to run `npm install` for every example:
 
 ```
+cd examples-coffee
 ./install-all.sh
 ```
 
