@@ -14,3 +14,6 @@ Use this shell script to run `npm install` for every example:
 
 To start webpack (which bundle the files for the browser with watch mode) go
 into an example directory and run `npm start`.
+
+##### Meta Info
+forked since 847f9f0d47
