@@ -26,7 +26,7 @@ class Footer extends Component
 
     return r.a
       className: classnames selected: filter is selectedFilter
-      style: { cursor: 'hand' }
+      style: { cursor: 'pointer' }
       onClick: -> onShow filter
     , title
 
