@@ -6,6 +6,7 @@ Furthermore it contains a small React only examples (without Redux).
 
 All examples in the subdirectory contains a README.md with some exercises.
 
+### Setup
 Use this shell script to run `npm install` for every example:
 
 ```
@@ -13,8 +14,22 @@ cd examples-coffee
 ./install-all.sh
 ```
 
-To start webpack (which bundle the files for the browser with watch mode) go
-into an example directory and run `npm start`.
+### Starting the app
+```
+npm start
+```
+then open [http://localhost:3000](http://localhost:3000)
+
+##### Boilerplate Code
+All examples using webpack and express to bundle the files for the browser.
+Most content of these files is just a boilerplate code:
+
+- index.html
+- package.json
+- server.js
+- webpack.config.js
+
 
 ##### Meta Info
-forked since 847f9f0d47
+- forked since 847f9f0d47
+- updated to e45f8516
