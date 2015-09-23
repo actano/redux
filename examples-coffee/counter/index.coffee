@@ -20,5 +20,5 @@ provider = r Provider,
         -> r App
     ]
 
-# mount root component at #root element
+# mount root component at #root DOM
 React.render provider, document.getElementById 'root'

@@ -8,14 +8,19 @@ Add another button, which increment the counter only if the current value is odd
 
 ## Exercise 3
 
-Add another button, which increment the counter asynchronous, delayed by at least
+Add another button, which increment the counter asynchronously, delayed by at least
 100 ms.
 
 __Hint:__
 
-Simple actions in Redux are just a plain object, but you can also return a
-function instead. If the return value of a action is a function it will be called
-with two arguments:
+By default you can only dispatch actions which returns an object.
+This way asynchronous actions are not supported, only synchronous data flow.
+
+With the thunk middleware you can dispatch functions as well, which gives you
+the opportunity to create async actions.
+
+If the middleware detects an action which returns a function it will call it
+this way:
 
 ```
 action(dispatch, getState)
