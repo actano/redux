@@ -1,7 +1,6 @@
 React = require 'react'
 {Component} = React
 r = require 'r-dom'
-_ = require 'lodash'
 
 NestedList = require './components/NestedList'
 
